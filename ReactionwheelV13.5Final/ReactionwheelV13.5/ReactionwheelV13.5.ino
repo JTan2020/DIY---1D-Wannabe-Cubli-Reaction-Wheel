@@ -288,7 +288,7 @@ void SpeedPIout()
 //////////////////////////// Final PWM Values /////////////////////////////
 void ReactionWheelPWM()
 {
-  pwmOut=-PD_pwm; - PI_pwm;           //assign the end value of PWM to motor
+  pwmOut=-PD_pwm - PI_pwm;           //assign the end value of PWM to motor
   pwmOut = constrain(pwmOut, -255, 255);
   // Nidec motor PWM - 5% Duty Cycle = High Speed and 90% Duty Cycle = Low Speed
   //  This is oppisite of a standard DC motor therefore we have to map different values for pwmOut2
